@@ -1995,7 +1995,6 @@ input[type="button"].btn-block {
 /* ===== blog CARD ===== */
 .blog-card {
   background-color: var(--color-white);
-  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
