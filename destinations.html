@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feel Africa Safaris - Experience the Wild Heart of Africa</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- TOP SUBNAVBAR - Contact Info, Greeting, Language Toggle -->
+    <div class="top-subnavbar" id="topSubnavbar">
+        <div class="container-fluid">
+            <div class="row align-items-center h-80 g-0">
+                <!-- Contact Details -->
+                <div class="col-md-8 contact-section">
+                    <div class="contact-info d-flex align-items-center flex-wrap">
+                        <span class="greeting-message" id="greetingMessage">Good Morning</span>
+                        <span class="contact-separator">|</span>
+                        <a href="mailto:info@feelafricasafaris.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> info@feelafricasafaris.com
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="tel:0765706766" class="contact-link">
+                            <i class="fas fa-phone"></i> +256765706766
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="https://wa.me/254740384876" class="contact-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> +256740384876
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Language Toggle -->
+                <div class="col-md-4 language-section text-end">
+                    <div class="dropdown-container">
+                        <button class="btn-language" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLanguage">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <button class="language-option" data-lang="en">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/gb.svg" alt="English"> English
+                            </button>
+                            <button class="language-option" data-lang="fr">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/fr.svg" alt="Français"> Français
+                            </button>
+                            <button class="language-option" data-lang="de">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/de.svg" alt="Deutsch"> Deutsch
+                            </button>
+                            <button class="language-option" data-lang="es">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/es.svg" alt="Español"> Español
+                            </button>
+                            <button class="language-option" data-lang="sw">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/tz.svg" alt="Kiswahili"> Kiswahili
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="mainNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Logo_1.png" alt="Feel Africa Safaris Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="country-page.html">Uganda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="country-page.html">Kenya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="country-page.html">Tanzania</a></li>
+                    <li class="nav-item"><a class="nav-link" href="country-page.html">Rwanda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Other Countries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-book-now" href="enquiry.html">Enquiry</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="generic-hero-section">
+        <div class="generic-hero-content">
+            <h1 class="generic-hero-title">
+                Experience the best ever <span class="highlight-gold">Destinations</span> in Africa
+            </h1>
+            <div class="generic-hero-buttons">
+                <button class="btn btn-primary-custom">Start Your Adventure</button>
+                <button class="btn btn-secondary-custom">View Tours</button>
+            </div>
+        </div>
+        <div class="generic-hero-overlay"></div>
+        <img src="/placeholder.svg?height=600&width=1200" alt="African Elephant Safari" class="hero-bg">
+    </section>
+
+    <!-- CAtegories Start - New Design -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Categories</h2>
+
+                <!-- Sorting and Filtering Section - New Design -->
+                <div class="filter-container">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Topics</button>
+                        <button class="filter-tab" data-filter="gorilla">Gorilla Trekking</button>
+                        <button class="filter-tab" data-filter="wildlife">Wildlife Safari</button>
+                        <button class="filter-tab" data-filter="bird">Bird Watching</button>
+                    </div>
+                </div>
+
+                <!-- category Cards - New Design -->
+                <div class="blog-grid">
+                    <!--  -->
+                    <div data-type="gorilla">
+                        <div class="destination-card">
+                            <img src="/images/nat-4.jpg" alt="Serengeti National Park" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Serengeti National Park</h3>
+                                <p>bird-watching's crown jewel offers the greatest wildlife concentration on Earth.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div data-type="bird">
+                        <div class="destination-card">
+                            <img src="/images/nat-5.jpg" alt="Masai Mara National Reserve" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Masai Mara National Reserve</h3>
+                                <p>Experience the annual Great Migration and pristine African wilderness.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div data-type="wildlife">
+                        <div class="destination-card">
+                            <img src="/images/nat-5.jpg" alt="Masai Mara National Reserve" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Masai Mara National Reserve</h3>
+                                <p>Experience the annual Great Migration and pristine African wilderness.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div data-type="gorilla">
+                        <div class="destination-card">
+                            <img src="/images/nat-5.jpg" alt="Masai Mara National Reserve" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Masai Mara National Reserve</h3>
+                                <p>Experience the annual Great Migration and pristine African wilderness.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div data-type="bird">
+                        <div class="destination-card">
+                            <img src="/images/nat-6.jpg" alt="Chobe National Park" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Chobe National Park</h3>
+                                <p>Home to the largest elephant population in Africa.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div data-type="gorilla">
+                        <div class="destination-card">
+                            <img src="/images/nat-6.jpg" alt="Chobe National Park" class="destination-img">
+                            <div class="destination-content">
+                                <h3>Chobe National Park</h3>
+                                <p>Home to the largest elephant population in Africa.</p>
+                            </div>
+                            <div class="destination-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination - New Design -->
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn next">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- blog List End -->
+
+    <!-- SAFARI PACKAGES SECTION -->
+    <section id="tours" class="safari-packages py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="packages.title">Explore Our Popular Safari Packages</h2>
+            
+            <div class="g-4 packages-container">
+                <!-- Package 1 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-7.jpg" alt="Classic Serengeti Safari">
+                        <div class="package-info">
+                            <h3>Classic Serengeti Safari</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" data-i18n="packages.serengeti.price">$1,990</p>
+                            <p >Witness the Great Migration and the Big Five in the iconic Serengeti National Park.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-8.jpg" alt="Luxury Masai Mara">
+                        <div class="package-info">
+                            <h3 >Luxury Masai Mara Experience</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price">$2,450</p>
+                            <p >Enjoy an exclusive safari in the heart of Masai Mara with luxurious accommodations.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-9.jpg" alt="Chobe & Victoria Falls">
+                        <div class="package-info">
+                            <h3>Chobe & Victoria Falls Adventure</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" >$3,200</p>
+                            <p>Combine the wildlife of Chobe National Park with the spectacular Victoria Falls.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-5.jpg" alt="Luxury Masai Mara">
+                        <div class="package-info">
+                            <h3 >Luxury Masai Mara Experience</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price">$2,450</p>
+                            <p >Enjoy an exclusive safari in the heart of Masai Mara with luxurious accommodations.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-4.jpg" alt="Chobe & Victoria Falls">
+                        <div class="package-info">
+                            <h3>Chobe & Victoria Falls Adventure</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" >$3,200</p>
+                            <p>Combine the wildlife of Chobe National Park with the spectacular Victoria Falls.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-green" style="letter-spacing: 2px;">Let us customize a safari for you</h6>
+                        <h1 class="text-white">Your <span class="text-green text-uppercase">Bespoke</span> <span class="text-uppercase">Safari</span></h1>
+                    </div>
+                    <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check "></i>Labore eos amet dolor amet diam</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Etsea et sit dolor amet ipsum</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Diam dolor diam elitripsum vero.</li>
+                    </ul> 
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-green text-center p-4">
+                            <h3 class="text-white m-0">Get Your Custom Safari Now</h3>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="" id="" rows="3" class="form-control p-4" placeholder="Type details of your custom safari....."></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn filter-tab active btn-block py-3" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <img src="images/Logo_1.png" alt="Feel Africa Safaris" class="footer-logo">
+                    <p data-i18n="footer.desc">Discover the adventure of Africa with Feel Africa Safaris, where authentic safari experiences meet luxury.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.quicklinks">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="#tours" data-i18n="nav.tours">Tours</a></li>
+                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.packages">Safari Packages</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Serengeti Safari</a></li>
+                        <li><a href="#">Masai Mara More</a></li>
+                        <li><a href="#">Chobe & Victoria Falls</a></li>
+                        <li><a href="#">Custom Safaris</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.follow">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="text-center py-3">
+                <p data-i18n="footer.copyright">&copy; 2026 Feel Africa Safaris. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- i18next for multi-language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Language translations -->
+    <script src="js/translations.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

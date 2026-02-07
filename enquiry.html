@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Safari Adventures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <!-- TOP SUBNAVBAR - Contact Info, Greeting, Language Toggle -->
+    <div class="top-subnavbar" id="topSubnavbar">
+        <div class="container-fluid">
+            <div class="row align-items-center h-80 g-0">
+                <!-- Contact Details -->
+                <div class="col-md-8 contact-section">
+                    <div class="contact-info d-flex align-items-center flex-wrap">
+                        <span class="greeting-message" id="greetingMessage">Good Morning</span>
+                        <span class="contact-separator">|</span>
+                        <a href="mailto:info@feelafricasafaris.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> info@feelafricasafaris.com
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="tel:0765706766" class="contact-link">
+                            <i class="fas fa-phone"></i> +256765706766
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="https://wa.me/254740384876" class="contact-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> +256740384876
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Language Toggle -->
+                <div class="col-md-4 language-section text-end">
+                    <div class="dropdown-container">
+                        <button class="btn-language" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLanguage">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <button class="language-option" data-lang="en">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/gb.svg" alt="English"> English
+                            </button>
+                            <button class="language-option" data-lang="fr">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/fr.svg" alt="Français"> Français
+                            </button>
+                            <button class="language-option" data-lang="de">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/de.svg" alt="Deutsch"> Deutsch
+                            </button>
+                            <button class="language-option" data-lang="es">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/es.svg" alt="Español"> Español
+                            </button>
+                            <button class="language-option" data-lang="sw">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/tz.svg" alt="Kiswahili"> Kiswahili
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="header">
+        <nav class="nav nav-container">
+            <div class="nav__data">
+                <a href="/" class="nav__logo">
+                    <img src="/images/Logo_1.png" width="80px" alt="Roads of adventure logo">
+                </a>
+
+                <div class="enquiry-small">
+                    <li><a href="/enquiry" class=" btn-enquiry">Enquiry</a></li>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link">Home</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-ug"></span> Uganda</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-ke"></span> Kenya</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-tz"></span> Tanzania</a></li>
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                    Other Countries<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-ke"></span> Kenya</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-tz"></span> Tanzania</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-mg"></span> Madagascar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                    Destinations<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="destination.html" class="dropdown__link">Serengeti National Park</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Masai Mara National Reserve</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Serengeti National Park</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Masai Mara National Reserve</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html" class="nav__link">About</a></li>
+                <li><a href="/enquiry.html" class="nav__link btn-enquiry">Enquiry</a></li>
+            </ul>
+
+            <div class="nav_grid">
+                <div class="nav_countries">
+                    <h3>Countries</h3>
+                    <ul class="nav_list_grid">
+                        <li class="nav_grid_item"><a href="country-page.html"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-ke"></span> Kenya</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-tz"></span> Tanzania</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-mg"></span> Madagascar</a></li>
+                    </ul>
+                </div>
+                <div class="nav_destinations">
+                    <ul>
+                        <li>
+                            <h3 class="destination-list-toggle">Destinations<i class="ri-arrow-down-s-line nav__row__arrow"></i></h3>
+                            <ul class="nav_list_row">
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Serengeti National Park</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Masai Mara National Reserve</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Serengeti National Park</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Masai Mara National Reserve</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+                <div class="nav_other_links">
+                    <h3>Useful Links</h3>
+                    <ul class="nav_list_grid">
+                        <li class="nav_grid_item"><a href="/index.html"><i class='bx bx-home'></i> Home</a></li>
+                        <li class="nav_grid_item"><a href="/about.html"><i class='bx bx-info-circle'></i> About Us</a></li>
+                    </ul>
+                </div>
+            </div> 
+            </div>
+        </nav>
+    </header>
+    
+    <main class="about-page">
+        <!-- HERO SECTION -->
+        <section id="home" class="generic-hero-section">
+            <div class="generic-hero-content">
+                <h1 class="generic-hero-title">
+                    Enquiry  <span class="highlight-gold">Page</span>
+                </h1>
+            </div>
+            <div class="generic-hero-overlay"></div>
+            <img src="/placeholder.svg?height=600&width=1200" alt="African Elephant Safari" class="hero-bg">
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="enquiry-section">
+            <div class="container">
+                <div class="enquiry-grid">
+                    <!-- Contact Form -->
+                    <div class="enquiry-form-block">
+                        <h2>Send Us Your Enquiry</h2>
+                        <form class="enquiry-form" id="enquiryForm">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination">Preferred Destination</label>
+                                <select id="destination" name="destination" required>
+                                    <option value="">Select a destination</option>
+                                    <option value="serengeti">Serengeti National Park</option>
+                                    <option value="amboseli">Amboseli National Park</option>
+                                    <option value="masai-mara">Masai Mara</option>
+                                    <option value="kilimanjaro">Mount Kilimanjaro</option>
+                                    <option value="rift-valley">Rift Valley Lakes</option>
+                                    <option value="custom">Custom Itinerary</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="duration">Trip Duration (Days)</label>
+                                <input type="number" id="duration" name="duration" min="1" max="30" placeholder="e.g., 5">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers</label>
+                                <input type="number" id="travelers" name="travelers" min="1" max="20" placeholder="e.g., 4">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dates">Preferred Travel Dates</label>
+                                <input type="date" id="dates" name="dates">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your safari dreams..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the terms and conditions</label>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Enquiry</button>
+                        </form>
+                        <div class="form-message" id="formMessage" style="display: none;"></div>
+                    </div>
+
+                    <!-- Contact Information Sidebar -->
+                    <div class="enquiry-info-block">
+                        <h2>Contact Details</h2>
+                        
+                        <div class="info-section">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+254712345678">+254 712 345 678</a></p>
+                            <p><a href="tel:+254732456789">+254 732 456 789</a></p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@safariventures.com">info@safariventures.com</a></p>
+                            <p><a href="mailto:bookings@safariventures.com">bookings@safariventures.com</a></p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Office Location</h3>
+                            <p>123 Safari Avenue<br>Nairobi, Kenya 00100</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Office Hours</h3>
+                            <p><strong>Monday - Friday</strong><br>8:00 AM - 6:00 PM</p>
+                            <p><strong>Saturday</strong><br>9:00 AM - 4:00 PM</p>
+                            <p><strong>Sunday</strong><br>Closed</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Follow Us</h3>
+                            <div class="social-links-compact">
+                                <a href="#" title="Facebook">Facebook</a>
+                                <a href="#" title="Instagram">Instagram</a>
+                                <a href="#" title="Twitter">Twitter</a>
+                                <a href="#" title="YouTube">YouTube</a>
+                            </div>
+                        </div>
+
+                        <div class="info-section support-info">
+                            <p class="info-text">Need urgent assistance? Call us directly during office hours for immediate support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h4>How far in advance should I book?</h4>
+                        <p>We recommend booking 2-3 months in advance for the best availability and rates, though we can sometimes accommodate last-minute bookings.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is your cancellation policy?</h4>
+                        <p>See our Travel Policy page for detailed cancellation terms. Generally, cancellations made 60+ days before travel receive full refunds.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you offer custom itineraries?</h4>
+                        <p>Absolutely! We specialize in creating personalized safari experiences tailored to your interests and budget.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is included in the package?</h4>
+                        <p>Accommodation, meals, professional guides, park fees, and ground transportation are typically included. Ask about specific packages.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do you provide visa assistance?</h4>
+                        <p>Yes, we provide guidance and documentation support for visa applications to all required countries.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What about travel insurance?</h4>
+                        <p>Travel insurance is highly recommended and we can provide recommendations for reputable providers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-green" style="letter-spacing: 2px;">Let us customize a safari for you</h6>
+                        <h1 class="text-white">Your <span class="text-green text-uppercase">Bespoke</span> <span class="text-uppercase">Safari</span></h1>
+                    </div>
+                    <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check "></i>Labore eos amet dolor amet diam</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Etsea et sit dolor amet ipsum</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Diam dolor diam elitripsum vero.</li>
+                    </ul> 
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-green text-center p-4">
+                            <h3 class="text-white m-0">Get Your Custom Safari Now</h3>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="" id="" rows="3" class="form-control p-4" placeholder="Type details of your custom safari....."></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn filter-tab active btn-block py-3" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <img src="images/Logo_1.png" alt="Feel Africa Safaris" class="footer-logo">
+                    <p data-i18n="footer.desc">Discover the adventure of Africa with Feel Africa Safaris, where authentic safari experiences meet luxury.</p>
+                    
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.quicklinks">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="#tours" data-i18n="nav.tours">Tours</a></li>
+                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.packages">Safari Packages</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Serengeti Safari</a></li>
+                        <li><a href="#">Masai Mara More</a></li>
+                        <li><a href="#">Chobe & Victoria Falls</a></li>
+                        <li><a href="#">Custom Safaris</a></li>
+                    </ul>
+                </div>
+
+                <!-- Partners Carousel -->
+                <div class="col-md-3">
+                    <h5>Our Partners</h5>
+                    <div class="partner-carousel-container">
+                        <div class="carousel-wrapper">
+                            <!-- Carousel slides -->
+                            <div class="carousel-slide active">
+                                <a href="#"><img src="images/SafariBooking.webp" alt="Partner 1" class="partner-logo"></a>
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="#"><img src="images/TripAdvisor.webp" alt="Partner 2" class="partner-logo"></a>
+                                
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="#"><img src="images/utb.webp" alt="Partner 3" class="partner-logo"></a>
+                                
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="#"><img src="images/UWA.webp" alt="Partner 4" class="partner-logo"></a>
+                                
+                            </div>
+                            <div class="carousel-slide">
+                                <a href="#"><img src="images/autologo.webp" alt="Partner 5" class="partner-logo"></a>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Navigation dots -->
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                        </div>
+
+                        <!-- Navigation arrows -->
+                        <button class="carousel-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="carousel-nav next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="socials-footer py-2">
+                <h5 >Follow us on</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            
+            <hr>
+
+            <div class="text-center py-3">
+                <p data-i18n="footer.copyright">&copy; 2026 Feel Africa Safaris. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- i18next for multi-language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Language translations -->
+    <script src="js/translations.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

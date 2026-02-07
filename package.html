@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 day Ride through Serengeti National Park</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- TOP SUBNAVBAR - Contact Info, Greeting, Language Toggle -->
+    <div class="top-subnavbar" id="topSubnavbar">
+        <div class="container-fluid">
+            <div class="row align-items-center h-80 g-0">
+                <!-- Contact Details -->
+                <div class="col-md-8 contact-section">
+                    <div class="contact-info d-flex align-items-center flex-wrap">
+                        <span class="greeting-message" id="greetingMessage">Good Morning</span>
+                        <span class="contact-separator">|</span>
+                        <a href="mailto:info@feelafricasafaris.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> info@feelafricasafaris.com
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="tel:0765706766" class="contact-link">
+                            <i class="fas fa-phone"></i> +256765706766
+                        </a>
+                        <span class="contact-separator">|</span>
+                        <a href="https://wa.me/254740384876" class="contact-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> +256740384876
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Language Toggle -->
+                <div class="col-md-4 language-section text-end">
+                    <div class="dropdown-container">
+                        <button class="btn-language" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLanguage">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <button class="language-option" data-lang="en">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/gb.svg" alt="English"> English
+                            </button>
+                            <button class="language-option" data-lang="fr">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/fr.svg" alt="Français"> Français
+                            </button>
+                            <button class="language-option" data-lang="de">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/de.svg" alt="Deutsch"> Deutsch
+                            </button>
+                            <button class="language-option" data-lang="es">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/es.svg" alt="Español"> Español
+                            </button>
+                            <button class="language-option" data-lang="sw">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.7/flags/4x3/tz.svg" alt="Kiswahili"> Kiswahili
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="header">
+        <nav class="nav nav-container">
+            <div class="nav__data">
+                <a href="/" class="nav__logo">
+                    <img src="/images/Logo_1.png" width="80px" alt="Roads of adventure logo">
+                </a>
+
+                <div class="enquiry-small">
+                    <li><a href="/enquiry" class=" btn-enquiry">Enquiry</a></li>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link">Home</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-ug"></span> Uganda</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-ke"></span> Kenya</a></li>
+                <li><a href="country-page.html" class="nav__link"><span class="fi fi-tz"></span> Tanzania</a></li>
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                    Other Countries<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-ke"></span> Kenya</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-tz"></span> Tanzania</a></li>
+                        <li><a href="country-page.html" class="dropdown__link"><span class="fi fi-mg"></span> Madagascar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                    Destinations<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="destination.html" class="dropdown__link">Serengeti National Park</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Masai Mara National Reserve</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Serengeti National Park</a></li>
+                        <li><a href="destination.html" class="dropdown__link">Masai Mara National Reserve</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html" class="nav__link">About</a></li>
+                <li><a href="/enquiry.html" class="nav__link btn-enquiry">Enquiry</a></li>
+            </ul>
+
+            <div class="nav_grid">
+                <div class="nav_countries">
+                    <h3>Countries</h3>
+                    <ul class="nav_list_grid">
+                        <li class="nav_grid_item"><a href="country-page.html"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-ug"></span> Uganda</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-ke"></span> Kenya</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-tz"></span> Tanzania</a></li>
+                        <li><a href="country-page.html" class="nav_grid_item"><span class="fi fi-mg"></span> Madagascar</a></li>
+                    </ul>
+                </div>
+                <div class="nav_destinations">
+                    <ul>
+                        <li>
+                            <h3 class="destination-list-toggle">Destinations<i class="ri-arrow-down-s-line nav__row__arrow"></i></h3>
+                            <ul class="nav_list_row">
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Serengeti National Park</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Masai Mara National Reserve</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Serengeti National Park</a></li>
+                                <li><i class="ri-arrow-right-s-line"></i><a href="destination.html" class="nav_row_item">Masai Mara National Reserve</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+                <div class="nav_other_links">
+                    <h3>Useful Links</h3>
+                    <ul class="nav_list_grid">
+                        <li class="nav_grid_item"><a href="/index.html"><i class='bx bx-home'></i> Home</a></li>
+                        <li class="nav_grid_item"><a href="/about.html"><i class='bx bx-info-circle'></i> About Us</a></li>
+                    </ul>
+                </div>
+            </div> 
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="generic-hero-section">
+        <div class="generic-hero-content">
+            <h2 class="generic-hero-title">
+                3 day Ride through Serengeti National Park
+            </h2>
+        </div>
+        <div class="generic-hero-overlay"></div>
+        <img src="/placeholder.svg?height=600&width=1200" alt="African Elephant Safari" class="hero-bg">
+    </section>
+
+    <section class="container description-section">
+    <div class="row">
+        <div class="col-lg-8 mb-5 mt-4 mb-lg-0 justify-content">
+                <!-- Introduction Section -->
+                <section class="intro-section mb-5 justify-content">
+                    <p>This 7-day Kenya safari itinerary highlights key less popular and less visited Kenya parks like Aberdare National Park, Ol Pejeta Conservancy, Samburu National Reserve, and Meru National Park best for second comers to Kenya who have already explore the popular destination like Masai Mara. Each of these destinations showcases the rich diversity of Kenya's wildlife and stunning landscapes.</p>
+                    
+                    <p>Aberdare features dramatic mountains, dense forests, and waterfalls, making it a haven for various bird species and mammals like elephants and bushbucks. Ol Pejeta is renowned for its commitment to wildlife protection, being home to the last two northern white rhinos and a sanctuary for chimpanzees.</p>
+                    
+                    <p>Samburu National Reserve, characterized by its semi-arid environment, offers a unique opportunity to see wildlife that thrives in harsher conditions. Here, you can spot the "Samburu Special Five," which includes Grevy's zebra, Somali ostrich, reticulated giraffe, gerenuk, and Beisa oryx. Meru National Park, less traveled by tourists, is celebrated for its pristine wilderness and diverse habitats, featuring riverine forests, open plains, and rolling hills.</p>
+                    
+                    <p>This 7-day Kenya safari explores these lesser-known destinations, providing an enriching adventure filled with wildlife encounters, cultural interactions, and breathtaking views, making it a perfect choice for those seeking an authentic experience in the heart of Kenya.</p>
+                </section>
+
+                <!-- Tour Highlights Section -->
+                <section class="highlights-section">
+                    <div class="mb-2">
+                            <h3 class="m-0 font-weight-bold sub-headngs">Tour HighlightS</h3>
+                        </div>
+                    <ul class="highlight-list">
+                        <li>Day 1: Nairobi to Aberdare National Park</li>
+                        <li>Day 2: Aberdare to Ol Pejeta Conservancy</li>
+                        <li>Day 3-4: Ol Pejeta to Samburu National Reserve</li>
+                        <li>Day 5-6: Samburu to Meru National Park</li>
+                        <li>Day 7: Meru to Nairobi</li>
+                    </ul>
+                </section>
+
+                <!-- Itinerary Section -->
+                <section class="itinerary-section">
+                    <div class="mb-2">
+                        <h3 class="m-0 font-weight-bold sub-headngs">Detailed Itinerary Day By Day</h3>
+                        </div>
+                    <!-- Day 1 -->
+                    <div class="itinerary-item">
+                        <div class="itinerary-header" onclick="toggleItinerary(this)">
+                            <h3>Day 1: Nairobi to Aberdare National Park</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="itinerary-content">
+                            <div class="itinerary-details">
+                                <p>Depart from Nairobi early in the morning, heading to Aberdare National Park, located about 150 kilometers north of the city. The park is part of the Aberdare Mountain Range and is characterized by dense forests and waterfalls.</p>
+                                
+                                <p>Upon arrival, check into your lodge and enjoy lunch. In the afternoon, take a guided nature walk to spot birds like the African fish eagle and Jackson's francolin, or go on a game drive to see elephants, buffalo, and bushbucks.</p>
+                                
+                                <p>As evening falls, relax at your lodge, where you can observe wildlife at the waterhole, marking a great start to your safari.</p>
+                            </div>
+                            <div class="itinerary-meta">
+                                <div class="itinerary-meta-item">
+                                    <h4>Accommodation</h4>
+                                    <p>The Ark Lodge or similar</p>
+                                </div>
+                                <div class="itinerary-meta-item">
+                                    <h4>Meal Plan</h4>
+                                    <p>Lunch & Dinner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 2 -->
+                    <div class="itinerary-item">
+                        <div class="itinerary-header" onclick="toggleItinerary(this)">
+                            <h3>Day 2: Aberdare to Ol Pejeta Conservancy</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="itinerary-content">
+                            <div class="itinerary-details">
+                                <p>After breakfast, enjoy a final morning game drive in Aberdare before traveling to Ol Pejeta Conservancy, located on the Laikipia Plateau. This conservancy is notable for its wildlife efforts and is home to the only two remaining northern white rhinos.</p>
+                                
+                                <p>Arrive in time for lunch, then visit the chimpanzee sanctuary to learn about rehabilitation efforts. In the late afternoon, take a game drive to spot diverse wildlife, including lions, elephants, leopards, and giraffes.</p>
+                                
+                                <p>End your day with a night drive to see nocturnal animals such as bush babies and servals.</p>
+                            </div>
+                            <div class="itinerary-meta">
+                                <div class="itinerary-meta-item">
+                                    <h4>Accommodation</h4>
+                                    <p>Sweetwaters Serena Camp or similar</p>
+                                </div>
+                                <div class="itinerary-meta-item">
+                                    <h4>Meal Plan</h4>
+                                    <p>Breakfast, Lunch & Dinner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 3-4 -->
+                    <div class="itinerary-item">
+                        <div class="itinerary-header" onclick="toggleItinerary(this)">
+                            <h3>Day 3-4: Ol Pejeta to Samburu National Reserve</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="itinerary-content">
+                            <div class="itinerary-details">
+                                <p>On Day 3, head to Samburu National Reserve, about 200 kilometers away. Upon arrival, enjoy a packed lunch before your first game drive. Samburu is famous for its distinct wildlife, including the "Samburu Special Five": Grevy's zebra, Somali ostrich, and reticulated giraffe, gerenuk, and Beisa oryx.</p>
+                                
+                                <p>Spend the next two days exploring the reserve with morning and afternoon drives to maximize wildlife sightings. Visit a local Samburu village to learn about their traditions and lifestyle.</p>
+                                
+                                <p>In the evenings, relax at your lodge, sharing stories of the day's adventures under the stars.</p>
+                            </div>
+                            <div class="itinerary-meta">
+                                <div class="itinerary-meta-item">
+                                    <h4>Accommodation</h4>
+                                    <p>Samburu Sopa Lodge or similar</p>
+                                </div>
+                                <div class="itinerary-meta-item">
+                                    <h4>Meal Plan</h4>
+                                    <p>Breakfast, Lunch & Dinner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 5-6 -->
+                    <div class="itinerary-item">
+                        <div class="itinerary-header" onclick="toggleItinerary(this)">
+                            <h3>Day 5-6: Samburu to Meru National Park</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="itinerary-content">
+                            <div class="itinerary-details">
+                                <p>On Day 5, leave Samburu and travel to Meru National Park, approximately 200 kilometers away. Known for its diverse ecosystems and scenic landscapes, Meru is less frequented by tourists, allowing for a more intimate wildlife experience.</p>
+                                
+                                <p>After settling into your accommodation, take an afternoon game drive to explore the park's biodiversity, including elephants, lions, hyenas, and various antelope species like waterbuck and oryx.</p>
+                                
+                                <p>The following day, enjoy full-day game drives, where you can encounter both common and rare species, such as the African golden cat and numerous bird species. Visit the park's varied habitats, including riverine forests and open plains, providing excellent opportunities for wildlife observation.</p>
+                            </div>
+                            <div class="itinerary-meta">
+                                <div class="itinerary-meta-item">
+                                    <h4>Accommodation</h4>
+                                    <p>Elsa's Kopje or similar</p>
+                                </div>
+                                <div class="itinerary-meta-item">
+                                    <h4>Meal Plan</h4>
+                                    <p>Breakfast, Lunch & Dinner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Day 7 -->
+                    <div class="itinerary-item">
+                        <div class="itinerary-header" onclick="toggleItinerary(this)">
+                            <h3>Day 7: Meru to Nairobi</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="itinerary-content">
+                            <div class="itinerary-details">
+                                <p>After an early breakfast, take one last morning game drive in Meru to capture any final wildlife sightings. Look for birds like the African fish eagle and lilac-breasted roller.</p>
+                                
+                                <p>Depart for Nairobi, enjoying the scenic views along the way. Stop for lunch at a local restaurant, savoring traditional Kenyan cuisine.</p>
+                                
+                                <p>Arrive in Nairobi in the late afternoon, where your safari concludes. Reflect on the incredible experiences and memories created during your time in Kenya's hidden gems, leaving with a deeper appreciation for its wildlife and natural beauty.</p>
+                            </div>
+                            <div class="itinerary-meta">
+                                <div class="itinerary-meta-item">
+                                    <h4>Accommodation</h4>
+                                    <p>Not Included</p>
+                                </div>
+                                <div class="itinerary-meta-item">
+                                    <h4>Meal Plan</h4>
+                                    <p>Breakfast & Lunch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cost Section -->
+                <section class="cost-section">
+                    
+                    <div class="cost-container">
+                        <!-- Cost Includes -->
+                        <div class="cost-box">
+                            <h3>Cost Includes</h3>
+                            <ul class="cost-list cost-includes">
+                                <li>All airport pick up and transfers in private car</li>
+                                <li>Transport and wildlife drives in modified 4 x 4 Land Cruiser</li>
+                                <li>Services of a professional English speaking safari guide</li>
+                                <li>Drinking water</li>
+                                <li>Value Added Tax by Tanzania Revenue Authority</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Cost Excludes -->
+                        <div class="cost-box">
+                            <h3>Cost Excludes</h3>
+                            <ul class="cost-list cost-excludes">
+                                <li>International Flights</li>
+                                <li>All items of a personal nature</li>
+                                <li>Gratuities for safari guide and lodge staff (please tip separately)</li>
+                                <li>Travel insurance if needed</li>
+                                <li>Visa fee (50 US$/100 US$ for American or Irish Passport holders – to be paid upon arrival)</li>
+                                <li>Drinks and beverages in lodges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        
+        <div class="col-lg-4 ">
+
+            <!-- Search Start -->
+                    <div class="mt-4 mb-3 s-search">
+                        <div class="mb-2">
+                            <h3 class="m-0 font-weight-bold">Search</h3>
+                        </div>
+                        <div class="bg-white text-center border border-top-0 p-3">
+                            <div class="input-group mb-2" style="width: 100%;">
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter search..">
+                                <div class="input-group-append">
+                                    <button class="btn filter-tab active btn-block font-weight-bold px-3 mx-2">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search End -->
+
+                    <!-- Sticky Booking Form -->
+                    <div class="booking-form sticky-form">
+                        <h3>Book this Package Now</h3>
+                        <form id="bookingForm" action="/bookings" method="POST">
+                            <input type="hidden" name="tour" value="<%= tour._id %>">
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="fullName" required placeholder="Full Name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" name="phoneNumber" placeholder="Phone Number" required>
+                            </div>
+                            
+                            <div class="form-group">
+                            <select class="form-control" id="country" name="country" required>
+                                <!-- Placeholder option for clarity -->
+                                <option value="" selected>Country of Residence</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                            </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="travelDate">Preferred Travel Date</label>
+                                <input type="date" class="form-control" id="travelDate" name="travelDate">
+                            </div>
+                            
+                            <div class="form-group">
+                                <select class="form-control" id="travelers" name="numberOfAdults" required>
+                                    <option value="">Number of Travelers</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group price-section">
+                                <p class="price-label">Your estimated Cost</p>
+                                <p class="price">$1,990</p>
+                            </div>
+                            <button type="submit" class="book-package-btn btn-block">Book Package</button>
+                            <button class="customize-package-btn btn-block"><a href="#customize">Customize Package</a></button>
+                        </form>
+                    </div>
+                    
+                    <!-- PAYMENT OPTIONS SECTION -->
+                    <!-- Add this below your booking form or where you want the payment section to appear -->
+
+                    <div id="paymentSection" class="payment-section" style="display: none;">
+        <div class="payment-container">
+            <div class="payment-header">
+                <h3>Select Payment Method</h3>
+                <button type="button" class="payment-close" onclick="closePaymentSection()">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h4>Order Summary</h4>
+                <div class="summary-item">
+                    <span>Tour Package</span>
+                    <span id="summaryPackage">-</span>
+                </div>
+                <div class="summary-item">
+                    <span>Number of Travelers</span>
+                    <span id="summaryTravelers">-</span>
+                </div>
+                <div class="summary-item">
+                    <span>Travel Date</span>
+                    <span id="summaryDate">-</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <span id="summaryTotal">$0</span>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <h4>Choose Payment Method</h4>
+                
+                <div class="payment-options">
+                    <!-- Stripe -->
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="stripe" class="payment-radio">
+                        <div class="payment-card">
+                            <div class="payment-icon stripe-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.438 1.838-1.438.987 0 1.838.461 2.354 1.469l1.972-1.266c-.573-1.346-1.992-2.287-4.326-2.287-2.501 0-4.313 1.578-4.313 3.779 0 2.444 1.194 2.901 4.401 4.604 2.432 1.287 3.546 1.996 3.546 3.584 0 1.311-1.053 2.128-2.773 2.128-1.976 0-2.959-.922-3.515-2.361l-1.922 1.267c.667 1.79 2.123 2.871 5.437 2.871 2.924 0 4.882-1.577 4.882-3.885 0-2.115-1.079-2.857-4.239-4.411z"/>
+                                </svg>
+                            </div>
+                            <div class="payment-info">
+                                <h5>Credit/Debit Card</h5>
+                                <p>Visa, Mastercard</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- PayPal -->
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="paypal" class="payment-radio">
+                        <div class="payment-card">
+                            <div class="payment-icon paypal-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4-.04.22a.803.803 0 01-.793.68h-2.51a.585.585 0 01-.576-.68l.028-.16.56-3.54h-.028c.28-1.78 1.54-2.84 3.1-2.84h.9c1.82 0 3.24-.664 3.78-2.66.2-.74.22-1.52.06-2.2-.54-2.44-2.42-3.44-4.54-3.44h-.9c-1.56 0-2.82 1.06-3.1 2.84l-.56 3.54-.028.16c-.056.38.176.72.556.72h2.51a.585.585 0 00.576-.68l.04-.22.63-4 .04-.22c.084-.48.512-.8.998-.8h.5c2.01 0 3.58-.84 4.02-2.66.154-.662.112-1.36-.026-2.02"/>
+                                </svg>
+                            </div>
+                            <div class="payment-info">
+                                <h5>PayPal</h5>
+                                <p>Fast & secure</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- PesaPal -->
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="pesapal" class="payment-radio">
+                        <div class="payment-card">
+                            <div class="payment-icon pesapal-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="payment-info">
+                                <h5>PesaPal</h5>
+                                <p>Visa, Mastercard, Mobile Money</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Bank Transfer -->
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="bank" class="payment-radio">
+                        <div class="payment-card">
+                            <div class="payment-icon bank-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2 10v8h20V10H2zm18 7H4v-5h16v5zm-8-8L3 5h18l-9 4z"/>
+                                </svg>
+                            </div>
+                            <div class="payment-info">
+                                <h5>Bank Transfer</h5>
+                                <p>Direct bank</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <form id="paymentForm" class="payment-form">
+                <!-- Card Payment Form -->
+                <div id="cardPayment" class="payment-form-section" style="display: none;">
+                    <h4>Card Details</h4>
+                    <div class="form-group">
+                        <label>Cardholder Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control card-input" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" class="form-control" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" class="form-control" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PesaPal Payment Form -->
+                <div id="pesapalPayment" class="payment-form-section" style="display: none;">
+                    <h4>PesaPal Payment</h4>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="254712345678" required>
+                    </div>
+                    <div class="info-box">
+                        <p>You will be securely redirected to PesaPal to complete your payment. Accepted: Visa, Mastercard, MTN Mobile Money, and Airtel Mobile Money.</p>
+                    </div>
+                </div>
+
+                <!-- Bank Transfer Form -->
+                <div id="bankPayment" class="payment-form-section" style="display: none;">
+                    <h4>Bank Transfer Instructions</h4>
+                    <div class="bank-details">
+                        <div class="detail-row">
+                            <strong>Bank Name:</strong>
+                            <span>Kenya Commercial Bank (KCB)</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Account Name:</strong>
+                            <span>Safari Tours Ltd</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Account Number:</strong>
+                            <span>1234567890</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Swift Code:</strong>
+                            <span>KCBLKENA</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Amount:</strong>
+                            <span id="bankAmount">$0</span>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <p>Use your booking reference as the transaction description. We'll confirm your payment within 24 hours.</p>
+                    </div>
+                </div>
+
+                <!-- PayPal -->
+                <div id="paypalPayment" class="payment-form-section" style="display: none;">
+                    <div class="info-box">
+                        <p>You will be redirected to PayPal to complete your payment securely. Please do not close this window.</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="payment-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closePaymentSection()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="payBtn">Pay Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+                </div>
+    </div>
+    </section>
+
+    <!-- SAFARI PACKAGES SECTION -->
+    <section id="tours" class="safari-packages py-5">
+        <div class="container">
+            <h2 class="pages-section-title mb-5" data-i18n="packages.title">Serengeti National Park Safari Packages</h2>
+            
+            <div class="g-4 packages-container">
+                <!-- Package 1 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-7.jpg" alt="Classic Serengeti Safari">
+                        <div class="package-info">
+                            <h3>Classic Serengeti Safari</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" data-i18n="packages.serengeti.price">$1,990</p>
+                            <p >Witness the Great Migration and the Big Five in the iconic Serengeti National Park.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-8.jpg" alt="Luxury Masai Mara">
+                        <div class="package-info">
+                            <h3 >Luxury Masai Mara Experience</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price">$2,450</p>
+                            <p >Enjoy an exclusive safari in the heart of Masai Mara with luxurious accommodations.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-9.jpg" alt="Chobe & Victoria Falls">
+                        <div class="package-info">
+                            <h3>Chobe & Victoria Falls Adventure</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" >$3,200</p>
+                            <p>Combine the wildlife of Chobe National Park with the spectacular Victoria Falls.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-5.jpg" alt="Luxury Masai Mara">
+                        <div class="package-info">
+                            <h3 >Luxury Masai Mara Experience</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price">$2,450</p>
+                            <p >Enjoy an exclusive safari in the heart of Masai Mara with luxurious accommodations.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="packages">
+                    <div class="package-card">
+                        <img src="/images/nat-4.jpg" alt="Chobe & Victoria Falls">
+                        <div class="package-info">
+                            <h3>Chobe & Victoria Falls Adventure</h3>
+                            <div class="d-flex justify-content-between mb-2 mt-3">
+                                <small class="m-0"><i class="fa fa-calendar-alt"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user"></i>2 Person</small>
+                            </div>
+                            <p class="price" >$3,200</p>
+                            <p>Combine the wildlife of Chobe National Park with the spectacular Victoria Falls.</p>
+                            <div class="view-p-button">
+                                <a href="#" class="font-weight-bold book-btn text-white">View Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration"  id="customize">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-green" style="letter-spacing: 2px;">Let us customize a safari for you</h6>
+                        <h1 class="text-white">Your <span class="text-green text-uppercase">Bespoke</span> <span class="text-uppercase">Safari</span></h1>
+                    </div>
+                    <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check "></i>Labore eos amet dolor amet diam</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Etsea et sit dolor amet ipsum</li>
+                        <li class="py-2"><i class="fa fa-check "></i>Diam dolor diam elitripsum vero.</li>
+                    </ul> 
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-green text-center p-4">
+                            <h3 class="text-white m-0">Get this Package Customized Now</h3>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="" id="" rows="3" class="form-control p-4" placeholder="Tell us about your activities, interests, accommodation types (budget, mid-range, luxury) and any other information"></textarea>
+                                </div>
+                                <div>
+                                    <button class="btn filter-tab active btn-block py-3" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <img src="images/Logo_1.png" alt="Feel Africa Safaris" class="footer-logo">
+                    <p data-i18n="footer.desc">Discover the adventure of Africa with Feel Africa Safaris, where authentic safari experiences meet luxury.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.quicklinks">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="#tours" data-i18n="nav.tours">Tours</a></li>
+                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.packages">Safari Packages</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Serengeti Safari</a></li>
+                        <li><a href="#">Masai Mara More</a></li>
+                        <li><a href="#">Chobe & Victoria Falls</a></li>
+                        <li><a href="#">Custom Safaris</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 data-i18n="footer.follow">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="text-center py-3">
+                <p data-i18n="footer.copyright">&copy; 2026 Feel Africa Safaris. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- i18next for multi-language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- Language translations -->
+    <script src="js/translations.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Toggle Itinerary Items
+function toggleItinerary(element) {
+    const content = element.nextElementSibling;
+    const icon = element.querySelector('i');
+    
+    // Close all other itineraries
+    document.querySelectorAll('.itinerary-content').forEach(item => {
+        if (item !== content && item.classList.contains('active')) {
+            item.classList.remove('active');
+            item.style.display = 'none';
+            item.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+            item.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+        }
+    });
+    
+    // Toggle current itinerary
+    if (content.classList.contains('active')) {
+        content.classList.remove('active');
+        content.style.display = 'none';
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+    } else {
+        content.classList.add('active');
+        content.style.display = 'block';
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+    }
+}
+
+// Sticky Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.booking-form');
+    const mainContent = document.querySelector('.col-lg-8');
+    
+    if (window.innerWidth >= 992) { // Only on desktop
+        const formHeight = form.offsetHeight;
+        const contentHeight = mainContent.offsetHeight;
+        
+        if (formHeight < contentHeight) {
+            window.addEventListener('scroll', function() {
+                const formTop = form.getBoundingClientRect().top;
+                const contentBottom = mainContent.getBoundingClientRect().bottom;
+                
+                if (formTop <= 20 && contentBottom > 0) {
+                    form.style.position = 'sticky';
+                    form.style.top = '20px';
+                } else if (contentBottom <= 0) {
+                    form.style.position = 'relative';
+                    form.style.top = `${contentHeight - formHeight}px`;
+                } else {
+                    form.style.position = 'sticky';
+                    form.style.top = '20px';
+                }
+            });
+        }
+    }
+    
+    // Form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your inquiry! We will contact you shortly.');
+        this.reset();
+    });
+});
+    </script>
+</body>
+</html>
