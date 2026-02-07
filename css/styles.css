@@ -818,7 +818,7 @@ ol, ul {
   top: 50%;
   z-index: 2;
   color: var(--color-white);
-  max-width: 600px;
+  max-width: 800px;
   padding: 2rem 2rem;
   transform: translateY(-50%);
 }
@@ -2137,13 +2137,24 @@ input[type="button"].btn-block {
    ================================ */
 .generic-hero-section {
   position: relative;
-  height: 600px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 4rem 2rem;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(47, 79, 47, 0.7) 0%, rgba(196, 87, 45, 0.5) 100%);
+}
+
+.generic-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(47, 79, 47, 0.6), rgba(196, 87, 45, 0.3));
+  z-index: 1;
 }
 
 .generic-hero-section .generic-hero-bg {
@@ -3688,7 +3699,6 @@ color: var(--secondary-color);
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 3rem 0;
-  margin-top: 3rem;
 }
 
 .footer-logo {
