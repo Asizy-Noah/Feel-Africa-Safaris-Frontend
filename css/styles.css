@@ -4216,8 +4216,8 @@ color: var(--secondary-color);
   }
 
   .feature-info-smaller {
+    display: none;
     margin-top: 3rem;
-    display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
   }
