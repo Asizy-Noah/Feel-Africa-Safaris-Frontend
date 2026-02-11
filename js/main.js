@@ -130,6 +130,64 @@ document.addEventListener("click", (e) => {
 })
 
 // ================================
+// NAVBAR ACTIVE LINK HIGHLIGHT
+// ================================
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar")
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled")
+  } else {
+    navbar.classList.remove("scrolled")
+  }
+})
+
+// ================================
+// DESTINATION LIST TOGGLE - FIXED
+// ================================
+
+document.addEventListener('DOMContentLoaded', function () {
+    const destinationToggle = document.querySelector('.destination-list-toggle');
+    const navListRow = document.querySelector('.nav_list_row');
+    const navDestinationsLi = document.querySelector('.nav_destinations > ul > li');
+    const arrow = destinationToggle ? destinationToggle.querySelector('i') : null;
+
+    if (!destinationToggle || !navListRow) return;
+
+    // Toggle Function
+    function toggleMenu(forceClose = false) {
+        const isOpen = navListRow.style.display === 'flex';
+        
+        if (isOpen || forceClose) {
+            navListRow.style.display = 'none';
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
+        } else {
+            navListRow.style.display = 'flex';
+            if (arrow) arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+
+    // 1. Click Toggle
+    destinationToggle.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevents the document click listener from firing immediately
+        toggleMenu();
+    });
+
+    // 2. Close when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!navDestinationsLi.contains(e.target)) {
+            toggleMenu(true); // Force close
+        }
+    });
+
+    // 3. Close menu when selecting a destination item
+    const destinationItems = navListRow.querySelectorAll('.nav_row_item');
+    destinationItems.forEach(item => {
+        item.addEventListener('click', () => toggleMenu(true));
+    });
+});
+
+
+// ================================
 // SLICK CAROUSEL INITIALIZATION
 // ================================
 $(document).ready(() => {
@@ -283,17 +341,6 @@ document.getElementById("contactForm")?.addEventListener("submit", function (e) 
   this.reset()
 })
 
-// ================================
-// NAVBAR ACTIVE LINK HIGHLIGHT
-// ================================
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar")
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled")
-  } else {
-    navbar.classList.remove("scrolled")
-  }
-})
 
 // ================================
 // BUTTON RIPPLE EFFECT
@@ -616,7 +663,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        /* ================================
+  /* ================================
    PARTNER CAROUSEL FUNCTIONALITY
    ================================ */
 
@@ -773,80 +820,3 @@ if (document.readyState === 'loading') {
   addKeyboardNavigation();
 }
 
-// ================================
-// DESTINATION LIST TOGGLE - FIXED
-// ================================
-
-document.addEventListener('DOMContentLoaded', function () {
-    const destinationToggle = document.querySelector('.destination-list-toggle');
-    const navListRow = document.querySelector('.nav_list_row');
-    const navDestinationsLi = document.querySelector('.nav_destinations > ul > li');
-
-    if (!destinationToggle || !navListRow) {
-        console.log('[v0] Destination toggle or nav_list_row not found');
-        return;
-    }
-
-    console.log('[v0] Initializing destination menu toggle');
-
-    // Click handler for toggle
-    destinationToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        console.log('[v0] Destination toggle clicked');
-
-        // Toggle the list visibility
-        const isVisible = navListRow.style.display === 'flex';
-        navListRow.style.display = isVisible ? 'none' : 'flex';
-
-        // Rotate arrow
-        const arrow = destinationToggle.querySelector('i');
-        if (arrow) {
-            arrow.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
-        }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!navDestinationsLi.contains(e.target)) {
-            navListRow.style.display = 'none';
-            const arrow = destinationToggle.querySelector('i');
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        }
-    });
-
-    // Hover support for desktop
-    navDestinationsLi.addEventListener('mouseenter', function () {
-        console.log('[v0] Destination menu hovered - showing items');
-        navListRow.style.display = 'flex';
-        const arrow = destinationToggle.querySelector('i');
-        if (arrow) {
-            arrow.style.transform = 'rotate(180deg)';
-        }
-    });
-
-    navDestinationsLi.addEventListener('mouseleave', function () {
-        console.log('[v0] Destination menu mouse left - hiding items');
-        navListRow.style.display = 'none';
-        const arrow = destinationToggle.querySelector('i');
-        if (arrow) {
-            arrow.style.transform = 'rotate(0deg)';
-        }
-    });
-
-    // Close menu when selecting a destination
-    const destinationItems = navListRow.querySelectorAll('.nav_row_item');
-    destinationItems.forEach(item => {
-        item.addEventListener('click', function () {
-            console.log('[v0] Destination selected:', this.textContent);
-            navListRow.style.display = 'none';
-            const arrow = destinationToggle.querySelector('i');
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        });
-    });
-
-    console.log('[v0] Destination menu toggle initialized successfully');
-});
